@@ -1,14 +1,20 @@
+/* General Styles */
 body {
-  color: #40514e;
   margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-family: "Merriweather", serif;
+  color: #40514e;
 }
 
 h1 {
   color: #66bfbf;
   font-size: 5.625rem;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 0;
   font-family: "Sacramento", cursive;
 }
 
@@ -47,12 +53,36 @@ a:hover {
   color: #eaf6f6;
 }
 
-/* Top Section */
+/* Root Styles */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header, footer {
+  width: 100%;
+}
+
+/* Hero Section */
 .hero {
   background-color: #e4f9f5;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 20px 50px;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
 }
 
 .hero-title {
@@ -136,28 +166,8 @@ a:hover {
   margin: 40px auto 60px;
 }
 
-/* Footer */
-.footer {
-  background-color: #66bfbf;
-  padding: 50px 0 20px;
-}
 
-.footer-links {
-  color: #11999e;
-  font-family: "Montserrat", sans-serif;
-  margin: 10px 20px;
-  text-decoration: none;
-}
 
-.footer-links:hover {
-  color: #eaf6f6;
-}
-
-.footer-text {
-  color: #eaf6f6;
-  font-size: 0.75rem;
-  padding: 20px 0;
-}
 
 /* Buttons */
 .btn {
@@ -215,4 +225,11 @@ a:hover {
     width: 50%;
     margin: 20px auto;
   }
+}
+.bg-custom {
+  background-color: #66bfbf;
+}
+
+footer.bg-custom {
+  min-height: 200px; /* Ensures footer has a greater height */
 }

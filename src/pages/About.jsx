@@ -1,11 +1,11 @@
 import React from "react";
-import profilePic from "../assets/zulaikha.jpg"; // Add your image in the assets folder
+import profilePic from "../assets/duck.jpg"; // Add your image in the assets folder
 
 function About() {
   return (
-    <section className="about bg-light text-center py-5 w-100">
+    <section id="about"className="about bg-light text-center py-5 w-100">
       <div className="container">
-        <h2 className="mb-4">About Me</h2>
+        
         <img 
           src={profilePic} 
           alt="Zulaikha" 
@@ -13,6 +13,7 @@ function About() {
           width="150" 
           height="150"
         />
+		<h2 className="mb-4">Hello.</h2>
         <p className="lead mx-auto w-75">
           Hi! I'm Zulaikha, a passionate web developer who loves building user-friendly 
           and visually appealing websites. I specialize in React, JavaScript, and Bootstrap. 

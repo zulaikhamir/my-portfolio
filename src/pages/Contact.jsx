@@ -4,7 +4,7 @@ function Contact() {
   const [showContact, setShowContact] = useState(false);
 
   return (
-    <section className="contact bg-dark text-white py-5 text-center">
+    <section id="contact" className="about bg-light text-center py-5 w-100">
       <div className="container">
         <h2 className="mb-4">Get in Touch</h2>
         
@@ -19,31 +19,20 @@ function Contact() {
         {/* Contact Details (Hidden by Default) */}
         {showContact && (
           <div className="mt-3">
-            <p>Email: your.email@example.com</p>
-            <p>Phone: +123 456 7890</p>
+            <p>
+			<a href="mailto:zulaikhamir786@gmail.com" className="text-dark">
+        zulaikhamir786@gmail.com
+      </a>
+
+
+			</p>
+            <p>
+			<a href="tel:+918899826326" className="text-dark">
+        +91 8899826326
+      </a>
+			</p>
           </div>
         )}
-
-        {/* Social Links (Inline) */}
-        <div className="mt-4 d-flex justify-content-center">
-          <a 
-            href="https://www.linkedin.com/in/your-profile" 
-            className="text-white mx-3"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <span>|</span>
-          <a 
-            href="https://github.com/your-profile" 
-            className="text-white mx-3"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
       </div>
     </section>
   );

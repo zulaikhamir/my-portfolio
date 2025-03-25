@@ -1,11 +1,24 @@
 import React from "react";
+import backgroundImage from "../assets/Cutie nuage.jpg"
 
 function Home() {
+  const sectionStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "white",
+    textAlign: "center"
+  };
+
   return (
-    <section className="hero bg-light text-center py-5 w-100"> {/* Ensuring full width */}
-      <div className="container-fluid"> 
-        <h1 className="display-4">Hi, I'm Zulaikha</h1>
-        <p className="lead">A passionate Web Developer building awesome websites.</p>
+    <section style={sectionStyle}>
+      <div>
+        <h1 className="display-4">I'm Zulaikha.</h1><br/>
+        <p className="lead"style={{ color: "#66BFBF" }}>A passionate Web Developer building awesome websites.</p>
         <a href="#projects" className="btn btn-primary btn-lg">View My Work</a>
       </div>
     </section>
@@ -13,4 +26,3 @@ function Home() {
 }
 
 export default Home;
-
