@@ -1,23 +1,21 @@
-import React from "react";
-
 function Footer() {
   return (
-    <footer className="bg-custom text-white text-center py-5">
-      <div className="container d-flex flex-column align-items-center">
+    <footer className="min-h-[200px] bg-slate-900 py-20 text-center text-white">
+      <div className="container mx-auto px-4 flex flex-col items-center">
         {/* Social Links - Inline */}
-        <div className="d-flex justify-content-center">
+        <div className="flex justify-center space-x-6">
           <a
             href="https://www.linkedin.com/in/zulaikhaashiq/"
-            className="social-link mx-3"
+            className="transition-colors hover:text-slate-300"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
           </a>
-        
+
           <a
             href="https://github.com/zulaikhamir"
-            className="social-link mx-3"
+            className="transition-colors hover:text-slate-300"
             target="_blank"
             rel="noopener noreferrer"
           >
