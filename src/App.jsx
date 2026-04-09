@@ -3,19 +3,17 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
-import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-[#041B3A] text-slate-100">
       <Navbar />
-      <main>
+      <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Home />
         <About />
-        <Projects />
         <Experience />
-        <Contact />
+        <Projects />
       </main>
       <Footer />
     </div>
