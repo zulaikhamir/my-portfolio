@@ -1,49 +1,88 @@
-import { ChevronRight } from "lucide-react";
-import { Separator } from "../components/ui/separator";
+import Badge from "../components/markdown/Badge";
+import InlineCode from "../components/markdown/InlineCode";
+import Section from "../components/markdown/Section";
 
 function Experience() {
-  const companies = ["Google", "Pinterest", "Amazon", "Wattpad"];
-  const points = [
-    "Built and launched large-scale ML-driven conversion autobidding models affecting millions of users.",
-    "Led end-to-end model development from data and training to production launch for high impact systems.",
+  const stackRows = [
+    { area: "frontend", tools: ["React 18", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS", "Tailwind CSS", "Vite", "React Router", "Axios"], status: "active" },
+    { area: "backend", tools: ["FastAPI", "Python", "SQLAlchemy", "Alembic", "REST API design", "APScheduler"], status: "active" },
+    { area: "database", tools: ["PostgreSQL"], status: "active" },
+    { area: "cloud", tools: ["AWS S3 (presigned URLs)", "AWS EC2", "AWS IAM", "AWS Cognito", "AWS SNS"], status: "active" },
+    { area: "tools", tools: ["Git", "GitHub", "GitHub Actions", "Postman", "VS Code"], status: "active" },
+    { area: "learning", tools: ["Data Structures & Algorithms (Java)", "System Design fundamentals", "AWS Developer Associate (DVA-C02)"], status: "studying" },
+  ];
+
+  const experiencePoints = [
+    "Built full-stack applications using React, TypeScript, FastAPI, and PostgreSQL",
+    "Integrated 30+ REST APIs using a centralized Axios client",
+    "Implemented JWT authentication and role-based access control (RBAC)",
+    "Designed backend services using SQLAlchemy, Alembic, and APScheduler",
+    "Integrated AWS S3 presigned URLs and EC2-based workflows",
   ];
 
   return (
-    <section id="experience" className="py-16">
-      <div className="mb-6 flex items-center gap-4">
-        <h2 className="text-4xl font-semibold text-slate-100">/ experience</h2>
-        <Separator className="max-w-xs bg-slate-700" />
-      </div>
-      <div className="grid gap-8 md:grid-cols-[170px_1fr]">
-        <div className="space-y-2 border-l border-cyan-400/60 pl-4 md:border-l-0 md:border-r md:border-slate-800 md:pl-0 md:pr-4">
-          {companies.map((company, idx) => (
-            <button
-              key={company}
-              className={`w-full py-2 text-left text-sm uppercase tracking-wide ${
-                idx === 0 ? "text-cyan-300" : "text-slate-400"
-              }`}
-            >
-              {company}
-            </button>
-          ))}
+    <div className="space-y-14">
+      <Section id="stack" title="stack">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[620px] border-collapse text-left">
+            <thead>
+              <tr className="border-b border-[#21262d] text-[#f0f6fc]">
+                <th className="py-3 pr-4 font-semibold">area</th>
+                <th className="py-3 pr-4 font-semibold">tools</th>
+                <th className="py-3 font-semibold">status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {stackRows.map((row) => (
+                <tr key={row.area} className="border-b border-[#21262d]">
+                  <td className="py-3 pr-4 text-[#c9d1d9]">{row.area}</td>
+                  <td className="py-3 pr-4">
+                    <div className="flex flex-wrap gap-2">
+                      {row.tools.map((tool) => (
+                        <InlineCode key={tool}>{tool}</InlineCode>
+                      ))}
+                    </div>
+                  </td>
+                  <td className="py-3">
+                    <span className="text-sm text-[#8b949e]">
+                      <span
+                        className={`mr-1 inline-block h-2 w-2 rounded-full ${
+                          row.status === "active"
+                            ? "bg-[#3fb950]"
+                            : row.status === "studying"
+                              ? "bg-[#d29922]"
+                              : "bg-[#a371f7]"
+                        }`}
+                      />
+                      <Badge tone={row.status === "active" ? "shipped" : row.status === "studying" ? "in-progress" : "default"}>
+                        {row.status}
+                      </Badge>
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+      </Section>
 
-        <div>
-          <h3 className="text-4xl font-semibold text-slate-100">
-            Software Engineer @ <span className="text-cyan-300">Google</span>
-          </h3>
-          <p className="mt-2 text-base uppercase tracking-wider text-slate-400">Jan 2025 - Present</p>
-          <div className="mt-8 space-y-5">
-            {points.map((point) => (
-              <div key={point} className="flex gap-3 text-lg leading-8 text-slate-300">
-                <ChevronRight size={20} className="mt-1 shrink-0 text-cyan-300" />
-                <p>{point}</p>
-              </div>
-            ))}
+      <Section id="experience" title="experience">
+        <div className="border-l border-[#30363d] pl-4">
+          <div className="mb-3 flex items-start justify-between gap-4">
+            <div>
+              <h3 className="text-lg font-semibold text-[#f0f6fc]">Software Engineer</h3>
+              <p className="text-[#58a6ff]">JIT Global Infosystems</p>
+            </div>
+            <p className="text-sm text-[#8b949e]">Sep 2024 - Present</p>
           </div>
+          <ul className="md-list space-y-2 text-[#c9d1d9]">
+            {experiencePoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </section>
+      </Section>
+    </div>
   );
 }
 

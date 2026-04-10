@@ -35,7 +35,7 @@ function Navbar() {
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
-            <a href="mailto:hello@example.com" className="text-slate-400 transition-colors hover:text-cyan-300" aria-label="Email">
+            <a href="mailto:@example.com" className="text-slate-400 transition-colors hover:text-cyan-300" aria-label="Email">
               <Mail size={18} />
             </a>
             <a href="https://github.com/" target="_blank" rel="noreferrer" className="text-slate-400 transition-colors hover:text-cyan-300" aria-label="Github">
