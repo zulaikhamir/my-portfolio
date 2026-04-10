@@ -44,10 +44,10 @@ function Navbar() {
             <a href="https://www.linkedin.com/in/zulaikhaashiq/" target="_blank" rel="noreferrer" className="text-[#8b949e] transition-colors hover:text-[#58a6ff]" aria-label="LinkedIn">
               <Linkedin size={18} />
             </a>
-            <a href="#projects" className="text-[#8b949e] transition-colors hover:text-[#58a6ff]" aria-label="Projects">
+            <a href="https://medium.com/@zulaikhaa" className="text-[#8b949e] transition-colors hover:text-[#58a6ff]" aria-label="Projects">
               <PencilLine size={18} />
             </a>
-            <a href="/resume.pdf" download className="text-[#8b949e] transition-colors hover:text-[#58a6ff]" aria-label="Resume">
+            <a href="/my-portfolio/zulaikha-ashiq-resume.pdf" download className="text-[#8b949e] transition-colors hover:text-[#58a6ff]" aria-label="Resume">
               <Download size={18} />
             </a>
           </div>

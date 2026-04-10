@@ -60,7 +60,7 @@ function Home() {
         <span className="px-2"> </span>
         <MarkdownLink href="mailto:zulaikhamir786@gmail.com">email</MarkdownLink>
         <span className="px-2"> </span>
-        <MarkdownLink href="/resume.pdf" download>resume</MarkdownLink>
+        <MarkdownLink href="/my-portfolio/zulaikha-ashiq-resume.pdf" download>resume</MarkdownLink>
       </p>
     </section>
   );
