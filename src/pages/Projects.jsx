@@ -51,19 +51,14 @@ function Projects() {
 
   const focusLines = [
     { indent: 0, type: "brace", key: "{", value: "" },
-    { indent: 1, type: "pair", key: '"sprint"', value: '"90-day focus",'},
-    { indent: 1, type: "array-start", key: '"priorities"', value: "[" },
-    { indent: 2, type: "array-item", key: "", value: '"clear AWS DVA-C02 certification",' },
-    { indent: 2, type: "array-item", key: "", value: '"solve 200+ DSA problems (arrays -> graphs)",' },
-    { indent: 2, type: "array-item", key: "", value: '"ship aws-study-tracker v1.0",' },
-    { indent: 2, type: "array-item", key: "", value: '"finish \'Fall\' novel draft"' },
+    { indent: 1, type: "pair", key: '"focus"', value: '"engineering + writing",' },
+    { indent: 1, type: "array-start", key: '"working_on"', value: "[" },
+    { indent: 2, type: "array-item", key: "", value: '"DSA problem solving (Java)",' },
+    { indent: 2, type: "array-item", key: "", value: '"FastAPI backend design",' },
+    { indent: 2, type: "array-item", key: "", value: '"AWS fundamentals",' },
+    { indent: 2, type: "array-item", key: "", value: '"Leaves of Autumn manuscript"' },
     { indent: 1, type: "array-end", key: "]", value: "," },
-    { indent: 1, type: "object-start", key: '"daily"', value: "{" },
-    { indent: 2, type: "pair", key: '"morning"', value: '"DSA practice (2 problems)",' },
-    { indent: 2, type: "pair", key: '"afternoon"', value: '"build / work at JIT",' },
-    { indent: 2, type: "pair", key: '"evening"', value: '"AWS study + writing"' },
-    { indent: 1, type: "object-end", key: "}", value: "," },
-    { indent: 1, type: "pair", key: '"status"', value: '"locked in"' },
+    { indent: 1, type: "pair", key: '"status"', value: '"active"' },
     { indent: 0, type: "brace", key: "}", value: "" },
   ];
 
@@ -109,7 +104,7 @@ function Projects() {
         </div>
       </Section>
 
-      <Section id="current-focus" title="current focus">
+      <Section id="current-focus" title="current work">
         <article className="overflow-hidden rounded-lg border border-[#30363d] bg-[#0d1117] shadow-[0_0_0_1px_rgba(240,246,252,0.03)]">
           <header className="flex items-center justify-between border-b border-[#21262d] px-4 py-3">
             <div className="flex items-center gap-2">
