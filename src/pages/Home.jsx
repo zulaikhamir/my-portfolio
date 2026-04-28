@@ -1,16 +1,10 @@
 import MarkdownHeading from "../components/markdown/MarkdownHeading";
 import InlineCode from "../components/markdown/InlineCode";
 import MarkdownLink from "../components/markdown/MarkdownLink";
-// import { portraitAscii } from "../content/asciiArt";
+
 
 function Home() {
-  // const poetryLines = [
-  //   "i stitched my storms into syllables,",
-  //   "and called the ruin home.",
-  //   "between logic and longing,",
-  //   "i learned that silence also compiles,",
-  //   "and the heart still ships unfinished code.",
-  // ];
+
 
   return (
     <section id="home" className="space-y-7">
@@ -31,27 +25,6 @@ function Home() {
       <p className="border-l-4 border-[#3fb950] pl-5 leading-relaxed text-[#8b949e]">
         &gt; Some things are easier to express in systems, others in sentences. I work with both.
       </p>
-
-      {/* <div className="rounded-xl border border-[#30363d] p-4">
-        <div className="grid gap-5 md:grid-cols-[1.1fr_1fr]">
-          <div className="overflow-x-auto">
-            <pre className="min-w-max text-[7px] leading-[1.1] tracking-tight text-[#8b949e]">
-              {portraitAscii}
-            </pre>
-          </div>
-
-          <div className="space-y-3 border-l border-[#21262d] pl-4">
-            <p className="text-xs uppercase tracking-wide text-[#6e7681]">
-              from leaves of autumn
-            </p>
-            {poetryLines.map((line) => (
-              <p key={line} className="text-sm italic leading-relaxed text-[#c9d1d9]">
-                {line}
-              </p>
-            ))}
-          </div>
-        </div>
-      </div> */}
 
       <p className="text-sm text-[#8b949e]">
         <MarkdownLink href="https://github.com/zulaikhamir">github</MarkdownLink>
